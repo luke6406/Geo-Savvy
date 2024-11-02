@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(29, 26, 26);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px; /* Reduced margin for mobile */
+    padding: 0 1rem; /* Added padding for better layout */
+    width: 100%; /* Ensure container fits the screen */
+}
+
+#finalScore {
+    font-size: 2.4rem; /* Reduced size for mobile */
+    margin-bottom: 15px; /* Reduced margin for mobile */
+    text-align: center; /* Center text for better presentation */
+}
+
+#highScoresList {
+    list-style: none;
+    padding: 0;
+    font-size: 1.6rem; /* Reduced size for mobile */
+    margin-bottom: 15px; /* Reduced margin for mobile */
+}
+
+.high-score {
+    margin: 0.5rem 0;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px; /* Increased padding for better touch targets */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 8px; /* Adjusted margin for mobile */
+    font-size: 1.6rem; /* Adjusted font size for better readability */
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Media Query for additional mobile adjustments */
+@media screen and (max-width: 760px) {
+    #finalScore {
+        font-size: 2rem; /* Further reduction for very small screens */
+    }
+
+    #highScoresList {
+        font-size: 1.4rem; /* Further reduction for very small screens */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Ensure touch targets are comfortable */
+        font-size: 1.4rem; /* Slightly smaller for very small screens */
+    }
+}

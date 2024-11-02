@@ -1,0 +1,86 @@
+body {
+    color: #fff;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: rgb(18, 93, 225);
+    font-size: 2.4rem; /* Reduced for mobile */
+    min-width: 80%; /* Ensures full use of screen width */
+    max-width: 50rem; /* Sets a maximum width for larger screens */
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
+    transform: scale(1.02);
+    transition: transform 100ms; /* Corrected transition property */
+}
+
+.choice-prefix {
+    padding: 1.5rem 2rem; /* Adjusted for mobile */
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem; /* Adjusted for mobile */
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);   
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);   
+}
+
+/* Heads up Display */
+#hud {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 1.6rem; /* Reduced for mobile */
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 80%; /* Makes progress bar responsive */
+    height: 2.4rem; /* Reduced for mobile */
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgb(11, 223, 36);
+    width: 0%;
+}
+
+/* Media Query for additional mobile adjustments */
+@media screen and (max-width: 760px) {
+    .choice-container {
+        min-width: 100%; /* Full width on smaller screens */
+        font-size: 2rem; /* Further reduction for very small screens */
+    }
+
+    .hud-prefix, .hud-main-text {
+        font-size: 1.4rem; /* Reduced for mobile */
+    }
+
+    #progressBar {
+        height: 2rem; /* Adjust height for mobile */
+    }
+}
